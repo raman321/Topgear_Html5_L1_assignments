@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xena Events</title>
+    <style>
+        body{
+               background-color:lavenderblush;
+            }
+        h1{
+            font-family:"Harrington";
+            margin:auto;
+            text-align:center;
+            font-size: -webkit-xxx-large;
+          }
+          h2{
+              text-align:center 
+          }
+        table
+        {
+            border:solid 1px;
+            margin:auto;
+            margin-top:50px;
+            background-color:linen;
+        }
+        td
+        {
+            padding:10px;
+        }
+        label,input,button,option,select
+        {
+            font-family:serif;
+            font-size:x-large;
+        }
+</style>
+    <div>
+        <img src="xenalogo.jpg" width="15%" height="10%">
+        <h1>HOT BALLOON RIDING EVENT</h1>
+        <h2>Date: Feb 28<sup>th</sup> 2017 onwards for 5 Days</h2>
+    </div>
+</head>
+
+<body>
+    <form name="reg" onsubmit="Reg()">
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input type="text" pattern="^[A-Za-z -]+$" placeholder="Your name" name="name" oninvalid="alert('Name is required!');"
+                        required="required"></td>
+            </tr>
+            <tr>
+                <td><label>Age:</label></td>
+                <td><input type="number" min=18 max=120 name="age" value="18" required><br></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td>
+                    <input type="email" name="email" placeholder="Your email id" oninvalid="alert('Email is required!');"
+                        required><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label>City:</label></td>
+                <td><input list="city" name="city" oninvalid="alert('City is required!');" required>
+                    <datalist id="city">
+
+                        <option value="Rajkot">
+                        <option value="Vizag">
+                        <option value="Bangalore">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit">
+                <td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function Reg() {
+        var name = document.forms['reg']['name'].value;
+        var age = document.forms['reg']['age'].value;
+        var email = document.forms['reg']['email'].value;
+        var city = document.forms['reg']['city'].value;
+        if (name != null && age != null && email != null && city != null)
+            alert("You are registered successfully!!");
+
+    }
+</script>
+
+</html>

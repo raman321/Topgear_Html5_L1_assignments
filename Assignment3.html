@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Awesome Online Videos</title>
+    <style>
+        .header img {
+               float: left;
+            }
+        .header h1{
+                position: relative;
+                left: 40px;
+            }
+</style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div style="text-align: center;">
+
+            <img src="new-youtube-logo.jpg" alt="Logo" height="40" width="40" style="height:50px; width: initial">
+
+
+            <h1>Awesome Online Videos</h1>
+        </div>
+    </header>
+    <hr>
+
+    <div class="container" style="text-align:center">
+        <video id="video1" width="80%" title="Video of the Week" style="border:2px solid">
+            <source src="sample_wipro.mp4" type="video/mp4">
+            Video of The week
+        </video>
+        <br>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+    </div>
+
+    <script type="text/javascript">
+        var myVideo = document.getElementById("video1");
+        function play() {
+            myVideo.play();
+        }
+        function pause() {
+            myVideo.pause();
+        }
+
+    </script>
+
+</body>
+
+</html>
